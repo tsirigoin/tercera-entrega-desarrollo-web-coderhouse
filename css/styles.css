@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1&family=Cinzel+Decorative&family=Josefin+Sans:ital,wght@0,400;1,200;1,400&family=Luxurious+Roman&family=Montserrat:ital@0;1&family=Yanone+Kaffeesatz:wght@300;400&display=swap");
+/* variables */
+/* media queries */
+@media only screen and (max-width:425px) {
+  .header-form {
+    display: none;
+  }
+}
+
+/* reset universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(255, 185, 155, 0.4862745098) !important;
+}
+
+header {
+  font-family: "Yanone Kaffeesatz";
+  font-size: 1.3rem;
+}
+header .titular {
+  font-family: "Cinzel Decorative";
+  font-size: xx-large;
+}
+
+.margen-header {
+  padding-left: 0.5%;
+}
+
+.dropdown-menu {
+  background-color: rgb(130, 157, 184) !important;
+}
+
+main {
+  background-color: rgba(247, 138, 162, 0.2117647059);
+  font-family: "Alegreya";
+}
+@media only screen and (min-width:1025px) {
+  main {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+#featured-post {
+  border-bottom: 1px dashed #ff6a6c;
+}
+#featured-post .contenedor-grid {
+  padding: 1% 0.5%;
+}
+#featured-post .contenedor-grid h2 {
+  margin-bottom: 0.3rem;
+}
+
+.titular {
+  grid-area: titular;
+}
+.titular h2 {
+  font-family: "Cinzel Decorative";
+  font-size: 40px;
+}
+.titular .feat-description {
+  font-size: 32px;
+  font-style: italic;
+  margin-bottom: 0.2rem;
+}
+
+#img-feat-article {
+  grid-area: img;
+  content: url(../assets/img/atardecer.jpg);
+  max-width: 100%;
+  border-radius: 30px;
+  border: 2px dotted #1c1c3e;
+  margin-right: 0.5%;
+}
+@media only screen and (max-width:425px) {
+  #img-feat-article {
+    object-fit: cover;
+    max-width: 85%;
+    margin: auto;
+    width: auto;
+    content: url(../assets/img/atardecer_vertical.jpg);
+  }
+}
+@media only screen and (min-width:426px) and (max-width:768px) {
+  #img-feat-article {
+    content: url(../assets/img/atardecer_vertical.jpg);
+    object-fit: cover;
+    max-width: 75%;
+    margin: auto;
+    width: auto;
+  }
+}
+@media only screen and (min-width:769px) and (max-width:1024px) {
+  #img-feat-article {
+    content: url(../assets/img/atardecer_laptop.jpg);
+    object-fit: cover;
+    max-width: 100%;
+    margin: auto;
+    width: auto;
+  }
+}
+
+.feat-long-desc {
+  grid-area: long-desc;
+  margin-left: 0.5%;
+}
+@media only screen and (max-width:425px) {
+  .feat-long-desc {
+    display: none;
+  }
+}
+
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "titular img" "long-desc long-desc";
+}
+@media only screen and (max-width:425px) {
+  .contenedor-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "img" "titular";
+  }
+}
+
+.btn {
+  font-family: "Yanone Kaffeesatz" !important;
+}
+@media only screen and (max-width:425px) {
+  .btn {
+    font-size: xx-large !important;
+  }
+}
+
+.main-btn {
+  border-color: #4040ff !important;
+  color: #4040ff !important;
+}
+
+.secondary-btn-color {
+  border-color: #ff6a6c !important;
+  color: #ff6a6c !important;
+}
+
+.grid-wrapper {
+  display: grid;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "left right";
+  border-bottom: 1px dashed #ff6a6c;
+}
+@media only screen and (max-width:425px) {
+  .grid-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "right" "left";
+  }
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 span {
+  color: #4040ff;
+}
+
+h3, h4, h5 {
+  font-family: "Luxurious Roman";
+}
+
+.quote {
+  font-family: "Luxurious Roman";
+  font-style: italic;
+  font-size: large;
+}
+
+#img-feat-store {
+  grid-area: img;
+  content: url(../assets/img/memento_mori.jpg);
+  object-fit: cover;
+  max-width: 100%;
+  border-radius: 30px;
+  border: 2px dotted #1c1c3e;
+  margin-right: 0.5%;
+}
+@media only screen and (max-width:425px) {
+  #img-feat-store {
+    max-width: 100%;
+    margin: auto;
+    width: auto;
+    content: url(../assets/img/memento_mori.jpg);
+  }
+}
+@media only screen and (min-width:426px) and (max-width:768px) {
+  #img-feat-store {
+    content: url(../assets/img/memento_mori.jpg);
+    max-width: 100%;
+    margin: auto;
+    width: auto;
+  }
+}
+@media only screen and (min-width:769px) and (max-width:1024px) {
+  #img-feat-store {
+    content: url(../assets/img/memento_mori.jpg);
+    max-width: 100%;
+    margin: auto;
+    width: auto;
+  }
+}
+
+.left-div {
+  grid-area: left;
+}
+
+.right-div {
+  grid-area: right;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1&family=Cinzel+Decorative&family=Josefin+Sans:ital,wght@0,400;1,200;1,400&family=Luxurious+Roman&family=Montserrat:ital@0;1&family=Yanone+Kaffeesatz:wght@300;400&display=swap');
+
+/* variables */
+$dropdown-color: rgb(130, 157, 184);
+$titular-font: 'Cinzel Decorative';
+$header-font: 'Yanone Kaffeesatz';
+$main-font: 'Alegreya';
+$subtitle-font: 'Luxurious Roman';
+$img-border-color: #5b6c00; //floragenesis color
+$main-color: #4040ff; //aegean shoreline color
+$secondary-color: #ff6a6c; //toyota meadow color
+$tertiary-color: #1c1c3e; //evening tide color
+$body-color: #f78aa236; // flamingo's wade color
+$back-color: #ffb99b7c; //ancestral rose color
+$max-mobile: 425px;
+$max-tablet: 768px;
+$max-laptop: 1024px;
+
+/* media queries */
+
+$media-queries: (
+	'mobile' : unquote($string: 'only screen and (max-width:'+$max-mobile+')'),
+	'tablet' : unquote($string: 'only screen and (min-width:'+($max-mobile+1)+') and (max-width:'+$max-tablet+')'),
+	'laptop' : unquote($string: 'only screen and (min-width:'+($max-tablet+1)+') and (max-width:'+$max-laptop+')'),
+	'desktop': unquote($string: 'only screen and (min-width:'+($max-laptop+1)+')')
+);
+
+@mixin for_breakpoint($breakpoints) {
+	$conditions : ();
+	@each $breakpoint in $breakpoints {
+		$conditions: append(
+			$conditions,
+			#{inspect(map-get($media-queries,$breakpoint))},
+			comma
+		);
+	}
+
+	@media #{$conditions} {
+		@content;
+	}
+};
+
+.header-form {
+	@include for_breakpoint(mobile) {
+		display: none;
+	}
+}
+
+/* reset universal */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $back-color !important;
+}
+
+header {
+	font-family: $header-font;
+	font-size: 1.3rem;
+	.titular {
+		font-family: $titular-font;
+		font-size: xx-large;
+	}
+}
+
+.margen-header {
+	padding-left: .5%;
+}
+
+.dropdown-menu {
+	background-color: $dropdown-color !important;
+}
+
+main {
+	background-color: $body-color;
+	font-family: $main-font;
+	@include for_breakpoint(desktop) {
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+}
+
+#featured-post {
+	.contenedor-grid {
+		h2 {
+			margin-bottom: .3rem;
+		}
+		padding: 1% .5%;
+	}
+	border-bottom: 1px dashed $secondary-color;
+}
+
+.titular {
+	grid-area: titular;
+	h2 {
+		font-family: $titular-font;
+		font-size: 40px;
+	}
+	.feat-description {
+		font-size: 32px;
+		font-style: italic;
+		margin-bottom: .2rem;
+	}
+}
+
+#img-feat-article {
+	grid-area: img;
+	content: url(../assets/img/atardecer.jpg);
+	max-width: 100%;
+	border-radius: 30px;
+	border: 2px dotted $tertiary-color;
+	margin-right: .5%;
+	@include for_breakpoint(mobile) {
+		object-fit: cover;
+		max-width: 85%;
+		margin: auto;
+		width: auto;
+		content: url(../assets/img/atardecer_vertical.jpg);
+	}
+	@include for_breakpoint(tablet) {
+		content: url(../assets/img/atardecer_vertical.jpg);
+		object-fit: cover;
+		max-width: 75%;
+		margin: auto;
+		width: auto;
+	}
+	@include for_breakpoint(laptop) {
+		content: url(../assets/img/atardecer_laptop.jpg);
+		object-fit: cover;
+		max-width: 100%;
+		margin: auto;
+		width: auto;
+	}
+}
+
+.feat-long-desc {
+	grid-area: long-desc;
+	margin-left: .5%;
+	@include for_breakpoint(mobile) {
+		display: none;
+	}
+}
+
+.contenedor-grid {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-template-rows: auto;
+	grid-template-areas: "titular img" "long-desc long-desc";
+	@include for_breakpoint(mobile) {
+		grid-template-columns: repeat(1,1fr);
+		grid-template-rows: repeat(2,1fr);
+		grid-template-areas: "img" "titular";
+	}
+}
+
+.btn {
+	font-family: $header-font !important;
+	@include for_breakpoint(mobile) {
+		font-size: xx-large !important;
+	}
+}
+
+.main-btn {
+	border-color: $main-color !important;
+	color: $main-color !important;
+}
+
+.secondary-btn-color {
+	border-color: $secondary-color !important;
+	color: $secondary-color !important;
+}
+
+.grid-wrapper {
+	display: grid;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	grid-template-columns: repeat(2,1fr);
+	grid-template-rows: auto;
+	grid-template-areas: "left right";
+	border-bottom: 1px dashed $secondary-color;
+	@include for_breakpoint(mobile) {
+		grid-template-columns: repeat(1,1fr);
+		grid-template-rows: repeat(2,1fr);
+		grid-template-areas: "right" "left";
+	}
+}
+
+.grid-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h3 {
+	span {
+		color: $main-color;
+	}
+}
+
+h3, h4, h5 {
+	font-family: $subtitle-font;
+}
+
+.quote {
+	font-family: $subtitle-font;
+	font-style: italic;
+	font-size: large;
+}
+
+#img-feat-store {
+	grid-area: img;
+	content: url(../assets/img/memento_mori.jpg);
+	object-fit: cover;
+	max-width: 100%;
+	border-radius: 30px;
+	border: 2px dotted $tertiary-color;
+	margin-right: .5%;
+	@include for_breakpoint(mobile) {
+		max-width: 100%;
+		margin: auto;
+		width: auto;
+		content: url(../assets/img/memento_mori.jpg);
+	}
+	@include for_breakpoint(tablet) {
+		content: url(../assets/img/memento_mori.jpg);
+		max-width: 100%;
+		margin: auto;
+		width: auto;
+	}
+	@include for_breakpoint(laptop) {
+		content: url(../assets/img/memento_mori.jpg);
+		max-width: 100%;
+		margin: auto;
+		width: auto;
+	}
+}
+
+.left-div {
+	grid-area: left;
+}
+
+.right-div {
+	grid-area: right;
+}
