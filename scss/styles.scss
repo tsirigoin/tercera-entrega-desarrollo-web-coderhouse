@@ -84,13 +84,15 @@ header {
 }
 
 .caption {
-	position: absolute;
-    top: 25%;
-    left: 25%;
-    transform: translate( -50%, -75% );
-    text-align: center;
-    color: white;
-    font-weight: bold;
+	@include for_breakpoint(desktop) {
+		position: absolute;
+		top: 25%;
+		left: 25%;
+		transform: translate( -50%, -75% );
+		text-align: center;
+		color: white;
+		font-weight: bold;
+	}
 }
 
 .titular {
