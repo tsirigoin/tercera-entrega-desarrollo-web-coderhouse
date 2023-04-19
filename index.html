@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="El Estoico es un sitio web dedicado a difundir la filosofía estoica de una manera clara y accesible para todos. En nuestro sitio, encontrarás recursos, herramientas y guías prácticas para que puedas comenzar a aplicar el estoicismo en tu vida diaria y experimentar sus beneficios. También ofrecemos una comunidad de personas interesadas en el estoicismo, donde puedes compartir tus experiencias y discutir temas relacionados con la filosofía. ¡Únete a nosotros y comienza a vivir una vida más sabia, virtuosa y significativa!">
+	<meta name="keywords" content="estoicismo, filosofía, virtud, ética, desarrollo personal">
 	<link rel="stylesheet" href="./css/styles.css">
 	<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
@@ -12,31 +14,31 @@
 	<link rel="manifest" href="./assets/img/site.webmanifest">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/425c023706.js" crossorigin="anonymous"></script>
-	<title>El Estoico</title>
+	<title>Inicio - El Estoico</title>
 </head>
-<body>
+<body class="bg-dark">
 	<!-- start header -->
 	<header class="bg-dark">
 		<nav class="navbar navbar-expand-lg bg-dark">
 			<!-- start imagen de marca -->
-			<a href="./index.html" class="navbar-brand margen-header">
+			<a href="#" class="navbar-brand margen-header">
 				<object data="./assets/img/estatua_leon.png" width="45" height="45"></object>
 			</a>
 			<h1>
-				<a href="./index.html" class="navbar-brand titular text-white">El Estoico</a>
+				<a href="#" class="navbar-brand titular text-white">El Estoico</a>
 			</h1>
 			<!-- end imagen de marca -->
 			<!-- start elementos navegación -->
 			<div class="navbar-collapse collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
-						<a href="./index.html" class="nav-link text-white-50">Inicio</a>
+						<a href="#" class="nav-link text-white-50">Inicio</a>
 					</li>
 					<li class="nav-item">
-						<a href="./pages/podcast.html" class="nav-link text-white-50">Podcast</a>
+						<a href="#" class="nav-link text-white-50">Podcast</a>
 					</li>
 					<li class="nav-item">
-						<a href="./pages/recursos.html" class="nav-link text-white-50">Recursos</a>
+						<a href="./pages/tienda.html" class="nav-link text-white-50">Tienda</a>
 					</li>
 					<li class="nav-item">
 						<a href="./pages/about.html" class="nav-link text-white-50">Nosotros</a>
@@ -80,7 +82,7 @@
 	</header>
 	<!-- end header -->
 	<!-- start main -->
-	<main>
+	<main class="multi-bg2">
 		<!-- start featured post -->
 		<article id="featured-post">
 			<div class="contenedor-grid">
@@ -91,25 +93,31 @@
 					<p class="feat-description">
 						Una definición de nuestra filosofía a través de los siglos, y su resurgimiento en la actualidad.
 					</p>
-					<button type="button" class="btn btn-outline-primary main-btn">LEA MÁS</button>
 				</div>
 				<!-- start article image -->
 				<a href="./pages/articles/en_la_estoa_que_es_el_estoicismo.html">
-					<div id="img-feat-article"></div>
+					<div title="Foto de un atardecer" role="img" aria-label="Foto de un atardecer" id="img-feat-article"></div>
 				</a>
 				<!-- end article image -->
-				<p class="feat-long-desc">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium veritatis odit in itaque illo praesentium incidunt quis illum maxime quaerat voluptatem debitis dolor reprehenderit eum impedit, nobis minus doloremque voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis error eos voluptatem assumenda harum rem repellendus sapiente, distinctio ex cum quos quas doloremque labore. Enim consectetur unde nemo esse inventore.
-				</p>
+				<div>
+					<p class="feat-long-desc">
+						En este artículo, exploramos los conceptos fundamentales de la filosofía estoica, desde su origen y evolución histórica hasta su aplicación práctica en la vida moderna. Analizaremos los principios estoicos, como la importancia de vivir en el presente, la aceptación de lo que no se puede cambiar y la búsqueda de la virtud y la autodisciplina, y cómo estos pueden ser incorporados en nuestra vida diaria para alcanzar una mayor serenidad y fortaleza interior. También exploraremos la influencia del estoicismo en la cultura popular, así como su aplicación en diferentes áreas, como los negocios y el deporte. Si estás interesado en descubrir los secretos de la filosofía estoica y cómo aplicarlos en tu vida, este artículo es para ti.
+					</p>
+					<div>
+						<a href="./pages/articles/en_la_estoa_que_es_el_estoicismo.html" class="grid-item">
+							<button type="button" class="btn btn-outline-light primary-btn-color col-8">LEA MÁS</button>
+						</a>
+					</div>
+				</div>
 			</div>
 		</article>
 		<!-- end featured post -->
 		<!-- start section form -->
-		<section class="grid-wrapper">
+		<section id="form-main"	class="grid-wrapper">
 			<div class="left-div">
 				<div class="grid-item">
 					<h3 class="copete">
-						¡Únete a nuestra comunidad de más de <span>100.000</span> estoicos para recibir una meditación diaria!
+						¡Únete a nuestra comunidad de más de <span><em>100.000</em></span> estoicos para recibir una meditación diaria!
 					</h3>
 				</div>
 				<div class="grid-item">
@@ -121,14 +129,14 @@
 					<div class="d-flex flex-column flex-sm-row w-100 gap-2">
 						<label for="newsletter1" class="visually-hidden">Correo electrónico</label>
 						<input id="newsletter1" name="email-address" type="email" aria-label="Dirección de correo electrónico" class="form-control" placeholder="Correo electrónico">
-						<button class="btn btn-outline-primary primary-btn-color" type="button">SUSCRIBITE</button>
+						<button class="btn btn-outline-light primary-btn-color" type="button">SUSCRIBITE</button>
 					</div>
 				</form>
 			</div>
 		</section>
 		<!-- end section form -->
 		<!-- start section store -->
-		<section class="grid-wrapper">
+		<section id="store-main" class="grid-wrapper">
 			<div class="left-div">
 				<div class="grid-item">
 					<h3>
@@ -141,16 +149,160 @@
 					</h4>
 				</div>
 				<div class="grid-item">
-					<button class="btn btn-outline-primary primary-btn-color" type="button">VISITAR TIENDA</button>
+					<a href="./pages/tienda.html">
+						<button class="btn btn-outline-light primary-btn-color" type="button">VISITAR TIENDA</button>
+					</a>
 				</div>
 			</div>
-			<div class="right-div"> 
-				<div id="img-feat-store"></div>
+			<div class="right-div">
+				<a href="./pages/tienda.html">
+					<div title="Pintura 'Memento Mori'" role="img" aria-label="Pintura 'Memento Mori'" id="img-feat-store"></div>
+				</a>
 			</div>
 		</section>
 		<!-- end section store -->
+		<!-- start section other-articles -->
+		<section id="main-other-articles">
+			<div>
+				<h2>Últimos artículos</h2>
+			</div>
+			<div  class="large-grid-wrapper">
+				<div class="art-grid-wrapper" id="art1">
+					<a href="#" class="art-img">
+						<div title="Imagen de un escalador en la cima" role="img" aria-label="Imagen de un escalador en la cima" id="img-art1"></div>
+					</a>
+					<div class="feat-article-title grid-item-left">
+						<div>
+							<h3>
+								<a class="article-link" href="#" data-replace="Objetivos: una guía filosófica para marcarlos y alcanzarlos">
+									<span>Objetivos: una guía filosófica para marcarlos y alcanzarlos</span>
+								</a>
+							</h3>
+							<h4>
+								<a class="category-link" href="#" data-replace="Sabiduría">
+									<span>Sabiduría</span>
+								</a>
+							</h4>
+						</div>
+					</div>
+					<p class="grid-item">Exploremos cómo la filosofía puede ser una herramienta útil en el establecimiento y logro de objetivos. A través del análisis de diferentes corrientes filosóficas, desde el estoicismo hasta el existencialismo, este artículo ofrece una guía práctica para establecer objetivos significativos y alcanzarlos de manera efectiva. Con ejemplos claros y reflexiones personales, este artículo invita al lector a reflexionar sobre su propia relación con los objetivos y cómo pueden ser utilizados como herramientas para alcanzar una vida más satisfactoria y plena. Si estás interesado en descubrir cómo la filosofía puede ayudarte a establecer y alcanzar tus objetivos, este artículo es para ti.</p>
+					<a href="#" class="grid-item">
+						<button class="btn btn-outline-light primary-btn-color col-12" type="button">LEA MÁS</button>
+					</a>
+				</div>
+				<div class="art-grid-wrapper" id="art3">
+					<a href="#">
+						<div title="Foto de un hombre y una mujer junto con un perro" role="img" aria-labelledby="Foto de un hombre y una mujer junto con un perro" id="img-art2"></div>
+					</a>
+					<div class="feat-article-title grid-item-left">
+						<div>
+							<h3>
+								<a class="article-link" href="#">
+									<span>Cómo encontrar (y mantener) nuestra alegría</span>
+								</a>
+							</h3>
+							<h4>
+								<a class="category-link" href="#">
+									<span>Archivos</span>
+								</a>
+							</h4>
+						</div>
+					</div>
+					<p class="grid-item">Exploremos el tema de la felicidad desde una perspectiva estoica. A través del análisis de las enseñanzas de los filósofos estoicos, como Epicteto y Séneca, ofrecemos una guía práctica para encontrar y mantener la alegría en nuestras vidas. Exploremos cómo los estoicos creían que la felicidad no dependía de circunstancias externas, sino de la actitud interna y la autodisciplina. Con reflexiones personales y consejos prácticos, este artículo es una invitación a explorar el poder de la mente y cómo podemos encontrar la alegría en cualquier situación. Si estás interesado en descubrir cómo la filosofía estoica puede ayudarte a encontrar y mantener la alegría en tu vida, este artículo es para ti.</p>
+					<a href="#" class="grid-item">
+						<button class="btn btn-outline-light primary-btn-color col-12" type="button">LEA MÁS</button>
+					</a>
+				</div>
+				<div class="art-grid-wrapper" id="art4">
+					<a href="#">
+						<div title="Primer plano de una estatua en mármol" role="img" aria-label="Primer plano de una estatua en mármol" id="img-art3"></div>
+					</a>
+					<div class="feat-article-title grid-item-left">
+						<div>
+							<h3>
+								<a class="article-link" href="#">
+									<span>Estoicismo y epicureanismo</span>
+								</a>
+							</h3>
+							<h4>
+								<a class="category-link" href="#">
+									<span>Sabiduría</span>
+								</a>
+							</h4>
+						</div>
+					</div>
+					<p class="grid-item">Exploremos la diferencia de perspectivas entre dos de las escuelas filosóficas más importantes de la antigua Grecia: el estoicismo y el epicureanismo. A través del análisis de los principales conceptos de ambas escuelas, el artículo ofrece una comparativa entre las visiones estoicas y epicúreas en temas como la felicidad, la virtud y la naturaleza humana. Se exploran las similitudes y diferencias entre ambas corrientes, así como sus respectivas críticas hacia la otra. Con reflexiones profundas y rigurosas, este artículo es una invitación a explorar las diferentes perspectivas filosóficas y su relevancia en la vida moderna. Si estás interesado en descubrir las diferencias entre el estoicismo y el epicureanismo y cómo pueden aplicarse en tu vida, este artículo es para ti.</p>
+					<a href="#" class="grid-item">
+						<button class="btn btn-outline-light primary-btn-color col-12" type="button">LEA MÁS</button>
+					</a>
+				</div>
+				<div class="art-grid-wrapper" id="art2">
+					<a href="#">
+						<div title="Busto grecorromano coronado con laureles" role="img" aria-label="Busto grecorromano coronado con laureles" id="img-art4"></div>
+					</a>
+					<div class="feat-article-title grid-item-left">
+						<div>
+							<h3>
+								<a class="article-link" href="#">
+									<span>¿Quién fue Posidonio? Sobre su vida y viajes</span>
+								</a>
+							</h3>
+							<h4>
+								<a class="category-link" href="#">
+									<span>Perfiles</span>
+								</a>
+							</h4>
+						</div>
+					</div>
+					<p class="grid-item">Exploremos la figura del filósofo griego Posidonio, quien fue uno de los principales representantes del estoicismo en la antigüedad. A través del análisis de sus escritos y los relatos de sus viajes, el artículo ofrece una visión detallada de la vida y obra de Posidonio, destacando su papel como filósofo, científico y viajero. Se exploran sus principales enseñanzas filosóficas, así como su influencia en otros filósofos posteriores. Con información detallada y rigurosa, este artículo es una invitación a conocer a uno de los filósofos estoicos más importantes de la antigüedad y su legado en la filosofía occidental. Si estás interesado en la vida y obra de Posidonio, este artículo es para ti.</p>
+					<a href="#" class="grid-item">
+						<button class="btn btn-outline-light primary-btn-color col-12" type="button">LEA MÁS</button>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- end section other-articles -->
 	</main>
 	<!-- end main -->
+	<!-- start footer -->
+	<div class="container bg-dark">
+		<footer class="py-5">
+			<div class="row">
+				<div class="col-6 col-md-2 mb-3 text-white-50 margen-footer">
+					<h5>Sitio</h5>
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Inicio</a></li>
+						<li class="nav-item mb-2"><a href="./pages/about.html" class="nav-link p-0 text-muted">Nosotros</a></li>
+						<li class="nav-item mb-2"><a href="./pages/tienda.html" class="nav-link p-0 text-muted">Tienda</a></li>
+						<li class="nav-item mb-2"><a href="./pages/contacto.html" class="nav-link p-0 text-muted">Contacto</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-5 offset-md-1 mb-3 text-white-50">
+					<form>
+						<h5>Subscribite a nuestra newsletter</h5>
+						<p>Un pensamiento dado para acompañarte en tu día a día.</p>
+						<div class="d-flex flex-column flex-sm-row w-100 gap-2">
+							<label for="newsletter1" class="visually-hidden">Correo electrónico</label>
+							<input id="newsletter1" type="text" class="form-control" placeholder="Correo electrónico">
+							<button class="btn btn-outline-light primary-btn-color" type="button">Subscribite</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top text-white-50">
+				<p>&copy; 2023 El Estoico. Todos los derechos reservados.</p>
+				<ul class="list-unstyled d-flex">
+					<li class="ms-3"><a class="link-light" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+					<li class="ms-3"><a class="link-light" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+					<li class="ms-3"><a class="link-light" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+					<li class="ms-3"><a class="link-light" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+	<!-- end footer -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>

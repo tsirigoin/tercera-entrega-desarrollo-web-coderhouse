@@ -10,8 +10,9 @@ $img-border-color: #5b6c00; //floragenesis color
 $main-color: #4040ff; //aegean shoreline color
 $secondary-color: #ff6a6c; //toyota meadow color
 $tertiary-color: #1c1c3e; //evening tide color
-$body-color: #f78aa236; // flamingo's wade color
-$back-color: #ffb99b7c; //ancestral rose color
+$back-color: #FECBC5; //ancestral rose color
+$top-bottom-back-color: #fdafa0; // cloudburst color
+$link-color: #574546; //perennial dusk color
 $max-mobile: 425px;
 $max-tablet: 768px;
 $max-laptop: 1024px;
@@ -53,16 +54,50 @@ $media-queries: (
 	box-sizing: border-box;
 }
 
-body {
-	background-color: $back-color !important;
-}
-
 header {
 	font-family: $header-font;
 	font-size: 1.3rem;
-	.titular {
-		font-family: $titular-font;
-		font-size: xx-large;
+}
+
+#principal {
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	.thumbnail {
+		p {
+		margin-top: 1%;
+			margin-bottom: 1%;
+		}
+	}
+}
+
+.larger {
+	font-size: larger;
+}
+
+.thumbnail {
+	position: relative;
+	display: inline-block;
+}
+
+.bloque {
+	display: block;
+}
+
+.caption {
+	position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate( -50%, -75% );
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.titular {
+	font-family: $titular-font;
+	font-size: xx-large;
+	p {
+		font-family: $subtitle-font;
 	}
 }
 
@@ -74,12 +109,17 @@ header {
 	background-color: $dropdown-color !important;
 }
 
+.multi-bg2 {
+	width: 100%;
+	height: auto;
+	background: linear-gradient(to top, $top-bottom-back-color, $back-color, $back-color, $top-bottom-back-color);
+}
+
 main {
-	background-color: $body-color;
 	font-family: $main-font;
 	@include for_breakpoint(desktop) {
-		margin-left: 15%;
-		margin-right: 15%;
+		padding-left: 15%;
+		padding-right: 15%;
 	}
 }
 
@@ -90,6 +130,8 @@ main {
 		}
 		padding: 1% .5%;
 	}
+	margin-bottom: 1%;
+	padding-bottom: 1%;
 	border-bottom: 1px dashed $secondary-color;
 }
 
@@ -103,6 +145,11 @@ main {
 		font-size: 32px;
 		font-style: italic;
 		margin-bottom: .2rem;
+	}
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 }
 
@@ -146,14 +193,24 @@ main {
 
 .contenedor-grid {
 	display: grid;
-	grid-template-columns: repeat(2,1fr);
+	grid-template-columns: repeat(1,1fr);
 	grid-template-rows: auto;
-	grid-template-areas: "titular img" "long-desc long-desc";
+	grid-template-areas: "titular" "img" "long-desc";
 	@include for_breakpoint(mobile) {
 		grid-template-columns: repeat(1,1fr);
 		grid-template-rows: repeat(2,1fr);
 		grid-template-areas: "img" "titular";
 	}
+}
+
+#form-main, #store-main {
+	padding-top: 8%;
+	padding-bottom: 8%;
+}
+
+#main-other-articles {
+	padding-top: 4%;
+	padding-bottom: 4%;
 }
 
 .btn {
@@ -163,9 +220,15 @@ main {
 	}
 }
 
-.main-btn {
+.primary-btn-color {
 	border-color: $main-color !important;
 	color: $main-color !important;
+}
+
+.primary-btn-color-full {
+	border-color: $main-color !important;
+	background-color: $main-color !important;
+
 }
 
 .secondary-btn-color {
@@ -176,6 +239,7 @@ main {
 .grid-wrapper {
 	display: grid;
 	margin-top: 1%;
+	padding-bottom: 1%;
 	margin-bottom: 1%;
 	grid-template-columns: repeat(2,1fr);
 	grid-template-rows: auto;
@@ -192,9 +256,16 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-decoration: none;
 }
 
-h3 {
+.grid-item-left {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+}
+
+.copete {
 	span {
 		color: $main-color;
 	}
@@ -245,3 +316,246 @@ h3, h4, h5 {
 .right-div {
 	grid-area: right;
 }
+
+.large-grid-wrapper {
+	display: grid;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	grid-template-columns: repeat(2,1fr);
+	grid-template-rows: auto;
+	grid-template-areas: "art1 art2" "art3 art4";
+	@include for_breakpoint(mobile) {
+		grid-template-columns: repeat(1,1fr);
+		grid-template-rows: auto;
+		grid-template-areas: "art1" "art2" "art3" "art4";
+	}
+}
+
+#art1 {
+	grid-area: art1;
+}
+
+#art2 {
+	grid-area: art2;
+}
+
+#art3 {
+	grid-area: art3;
+}
+
+#art4 {
+	grid-area: art4;
+}
+
+.art-grid-wrapper {
+	display: grid;
+	margin: 1%;
+	grid-template-columns: repeat(1,1fr);
+	grid-template-rows: auto;
+	grid-template-areas: "art-img" "titl" "txt" "more";
+	a {
+		text-decoration: none;
+	}
+}
+
+.grid-item-left {
+	a {
+		background-image: linear-gradient(
+			to right,
+			$link-color,
+			$link-color 50%,
+			#000 50%
+		);
+		background-size: 200% 100%;
+		background-position: -100%;
+		display: inline-block;
+		padding: 5px 0;
+		position: relative;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: all 0.3s ease-in-out;
+	}  
+	a:before {
+		content: '';
+		background: $link-color;
+		display: block;
+		position: absolute;
+		bottom: -3px;
+		left: 0;
+		width: 0;
+		height: 3px;
+		transition: all 0.3s ease-in-out;
+	}  
+	a:hover {
+		background-position: 0;
+	}	  
+	a:hover::before {
+		width:100%;
+	}
+}
+
+.art-img {
+	grid-area: art-img;
+}
+
+.feat-article-title {
+	grid-area: titl;
+	div {
+		h4 {
+			font-family: $subtitle-font;
+			font-size: 1.1rem;
+			color: $img-border-color;
+		}
+		h3 {
+			margin-top: .4rem;
+			font-family: $titular-font;
+			font-size: 1.7rem;
+			margin-bottom: .1rem;
+			color: $tertiary-color;
+		}
+	}
+}
+
+.txt-desc {
+	grid-area: txt;
+}
+
+.btn-read-more {
+	grid-area: more;
+}
+
+#img-about {
+	grid-area: img;
+	content: url(../assets/img/nosotros.jpg);
+	max-width: 75%;
+	border-radius: 30px;
+	border: 2px dotted $tertiary-color;
+	margin-right: .5%;
+	@include for_breakpoint(mobile) {
+		object-fit: cover;
+		max-width: 85%;
+		margin: auto;
+		width: auto;
+	}
+	@include for_breakpoint(tablet) {
+		object-fit: cover;
+		max-width: 75%;
+		margin: auto;
+		width: auto;
+	}
+	@include for_breakpoint(laptop) {
+		object-fit: cover;
+		max-width: 100%;
+		margin: auto;
+		width: auto;
+	}
+}
+
+#img-art1 {
+	grid-area: img;
+	content: url(../assets/img/objetivos.jpg);
+	max-width: 100%;
+	border-radius: 30px;
+	border: 2px dotted $tertiary-color;
+	margin-right: .5%;
+	@include for_breakpoint(mobile) {
+		object-fit: cover;
+		max-width: 85%;
+		margin: auto;
+		width: auto;
+	}
+	@include for_breakpoint(tablet) {
+		object-fit: cover;
+		max-width: 75%;
+		margin: auto;
+		width: auto;
+	}
+	@include for_breakpoint(laptop) {
+		object-fit: cover;
+		max-width: 100%;
+		margin: auto;
+		width: auto;
+	}
+}
+
+#img-art2 {
+	grid-area: img;
+	content: url(../assets/img/pareja_y_perro.jpg);
+	max-width: 100%;
+	border-radius: 30px;
+	border: 2px dotted $tertiary-color;
+	margin-right: .5%;
+	@include for_breakpoint(mobile) {
+		object-fit: cover;
+		max-width: 85%;
+		margin: auto;
+		width: auto;
+	}
+	@include for_breakpoint(tablet) {
+		object-fit: cover;
+		max-width: 75%;
+		margin: auto;
+		width: auto;
+	}
+	@include for_breakpoint(laptop) {
+		object-fit: cover;
+		max-width: 100%;
+		margin: auto;
+		width: auto;
+	}
+}
+
+#img-art3 {
+	grid-area: img;
+	content: url(../assets/img/estatua.jpg);
+	max-width: 100%;
+	border-radius: 30px;
+	border: 2px dotted $tertiary-color;
+	margin-right: .5%;
+	@include for_breakpoint(mobile) {
+		object-fit: cover;
+		max-width: 85%;
+		margin: auto;
+		width: auto;
+	}
+	@include for_breakpoint(tablet) {
+		object-fit: cover;
+		max-width: 75%;
+		margin: auto;
+		width: auto;
+	}
+	@include for_breakpoint(laptop) {
+		object-fit: cover;
+		max-width: 100%;
+		margin: auto;
+		width: auto;
+	}
+}
+
+#img-art4 {
+	grid-area: img;
+	content: url(../assets/img/busto.jpg);
+	max-width: 100%;
+	border-radius: 30px;
+	border: 2px dotted $tertiary-color;
+	margin-right: .5%;
+	@include for_breakpoint(mobile) {
+		object-fit: cover;
+		max-width: 85%;
+		margin: auto;
+		width: auto;
+	}
+	@include for_breakpoint(tablet) {
+		object-fit: cover;
+		max-width: 75%;
+		margin: auto;
+		width: auto;
+	}
+	@include for_breakpoint(laptop) {
+		object-fit: cover;
+		max-width: 100%;
+		margin: auto;
+		width: auto;
+	}
+}
+
