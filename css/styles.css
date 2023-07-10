@@ -430,7 +430,7 @@ h3, h4, h5 {
   }
 }
 
-#img-art1 {
+.img-art1 {
   grid-area: img;
   content: url(../assets/img/objetivos.jpg);
   max-width: 100%;
@@ -439,7 +439,7 @@ h3, h4, h5 {
   margin-right: 0.5%;
 }
 @media only screen and (max-width:425px) {
-  #img-art1 {
+  .img-art1 {
     object-fit: cover;
     max-width: 85%;
     margin: auto;
@@ -447,7 +447,7 @@ h3, h4, h5 {
   }
 }
 @media only screen and (min-width:426px) and (max-width:768px) {
-  #img-art1 {
+  .img-art1 {
     object-fit: cover;
     max-width: 75%;
     margin: auto;
@@ -455,7 +455,7 @@ h3, h4, h5 {
   }
 }
 @media only screen and (min-width:769px) and (max-width:1024px) {
-  #img-art1 {
+  .img-art1 {
     object-fit: cover;
     max-width: 100%;
     margin: auto;
@@ -463,7 +463,7 @@ h3, h4, h5 {
   }
 }
 
-#img-art2 {
+.img-art2 {
   grid-area: img;
   content: url(../assets/img/pareja_y_perro.jpg);
   max-width: 100%;
@@ -472,7 +472,7 @@ h3, h4, h5 {
   margin-right: 0.5%;
 }
 @media only screen and (max-width:425px) {
-  #img-art2 {
+  .img-art2 {
     object-fit: cover;
     max-width: 85%;
     margin: auto;
@@ -480,7 +480,7 @@ h3, h4, h5 {
   }
 }
 @media only screen and (min-width:426px) and (max-width:768px) {
-  #img-art2 {
+  .img-art2 {
     object-fit: cover;
     max-width: 75%;
     margin: auto;
@@ -488,7 +488,7 @@ h3, h4, h5 {
   }
 }
 @media only screen and (min-width:769px) and (max-width:1024px) {
-  #img-art2 {
+  .img-art2 {
     object-fit: cover;
     max-width: 100%;
     margin: auto;
@@ -496,7 +496,7 @@ h3, h4, h5 {
   }
 }
 
-#img-art3 {
+.img-art3 {
   grid-area: img;
   content: url(../assets/img/estatua.jpg);
   max-width: 100%;
@@ -505,7 +505,7 @@ h3, h4, h5 {
   margin-right: 0.5%;
 }
 @media only screen and (max-width:425px) {
-  #img-art3 {
+  .img-art3 {
     object-fit: cover;
     max-width: 85%;
     margin: auto;
@@ -513,7 +513,7 @@ h3, h4, h5 {
   }
 }
 @media only screen and (min-width:426px) and (max-width:768px) {
-  #img-art3 {
+  .img-art3 {
     object-fit: cover;
     max-width: 75%;
     margin: auto;
@@ -521,7 +521,7 @@ h3, h4, h5 {
   }
 }
 @media only screen and (min-width:769px) and (max-width:1024px) {
-  #img-art3 {
+  .img-art3 {
     object-fit: cover;
     max-width: 100%;
     margin: auto;
@@ -529,7 +529,7 @@ h3, h4, h5 {
   }
 }
 
-#img-art4 {
+.img-art4 {
   grid-area: img;
   content: url(../assets/img/busto.jpg);
   max-width: 100%;
@@ -538,7 +538,7 @@ h3, h4, h5 {
   margin-right: 0.5%;
 }
 @media only screen and (max-width:425px) {
-  #img-art4 {
+  .img-art4 {
     object-fit: cover;
     max-width: 85%;
     margin: auto;
@@ -546,7 +546,7 @@ h3, h4, h5 {
   }
 }
 @media only screen and (min-width:426px) and (max-width:768px) {
-  #img-art4 {
+  .img-art4 {
     object-fit: cover;
     max-width: 75%;
     margin: auto;
@@ -554,7 +554,7 @@ h3, h4, h5 {
   }
 }
 @media only screen and (min-width:769px) and (max-width:1024px) {
-  #img-art4 {
+  .img-art4 {
     object-fit: cover;
     max-width: 100%;
     margin: auto;
